@@ -24,6 +24,7 @@ const Toast: React.FC<ToastProps> = ({ text, duration = 3000, type }) => {
             clearInterval(interval);
             clearTimeout(timer);
         };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
