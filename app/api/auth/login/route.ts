@@ -58,7 +58,10 @@ export async function POST(req: NextRequest) {
     if (error instanceof PrismaClientKnownRequestError) {
       return new Response("User not found", { status: 404 });
     }
-    return new Response("Internal Server Error", { status: 500 });
+    return new Response(
+      typeof error == "string" ? error : "Internal Server Error",
+      { status: 500 }
+    );
   }
 }
 
