@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 120px 0;
+}
+
+.flex [class*="basis-"] {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.flex [class*="basis-"]:first-child {
+  margin-left: 0;
+}
+
+.flex [class*="basis-"]:last-child {
+  margin-right: 0;
+}
+
+/* Heading One */
+h1 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+/* Heading Two */
+h2 {
+  font-size: 48px;
+  line-height: 56px;
+}
+
+/* Heading Three */
+h3 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+/* Heading Four */
+h4 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+/* Heading Five */
+h5 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+/* Heading Six */
+h6 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Body - Large */
+p.large {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+/* Body - Regular */
+p.regular {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Body - Small */
+p.small {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* Body - Extra Small */
+p.xsmall {
+  font-size: 12px;
+  line-height: 24px;
+}
+
+/* Caption */
+span.caption {
+  font-size: 14px;
+  line-height: 16px;
+}
