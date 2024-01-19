@@ -13,6 +13,9 @@ export async function POST(req: NextRequest) {
     return new Response("Bad Request", { status: 400 });
   }
 
+  /// admin
+  /// $2b$10$KW8wuNYEIIBqusDSHzBz4eLRE2QgFZp8pBYufdAkwnhfsiSqTBKbi
+
   try {
     const user = await prisma.user.findFirstOrThrow({
       where: { email: email },
@@ -58,6 +61,7 @@ export async function POST(req: NextRequest) {
     if (error instanceof PrismaClientKnownRequestError) {
       return new Response("User not found", { status: 404 });
     }
+    console.error(error);
     return new Response(
       typeof error == "string" ? error : "Internal Server Error",
       { status: 500 }
